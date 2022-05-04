@@ -1,8 +1,9 @@
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
+import Section from '../../components/Section'
 import * as S from './styles'
 
-export default function Home() {
+export default function Home(data) {
   return (
     <>
       <Header />
@@ -17,6 +18,12 @@ export default function Home() {
           ou LinkedIn. Abaixo estão os links dos repositórios:
         </S.Subtitle>
       </S.Wrapper>
+
+      <S.Content>
+        {data.commands.map((item) => (
+          <Section key={item.id} commands={item} />
+        ))}
+      </S.Content>
 
       <Footer />
     </>
