@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Header = styled.header`
   ${({ theme }) => css`
@@ -9,6 +10,11 @@ export const Header = styled.header`
     width: 100%;
     max-width: ${theme.grid.container};
     margin: 3rem auto;
+
+    ${media.lessThan('medium')`
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    `}
   `}
 `
 

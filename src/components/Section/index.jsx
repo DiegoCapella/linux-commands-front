@@ -15,8 +15,8 @@ export default function Section(item) {
   return (
     <>
       {/* Same as */}
-      <ToastContainer pauseOnFocusLoss={false} />
       <S.Section>
+        <ToastContainer pauseOnFocusLoss={false} />
         <S.Title>{item.commands.title}</S.Title>
 
         {item.commands.step.map((step) => (

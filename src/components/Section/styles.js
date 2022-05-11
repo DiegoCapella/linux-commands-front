@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
-export const Section = styled.section``
+export const Section = styled.section`
+  ${media.lessThan('medium')`
+    padding: 0 2rem;
+  `}
+`
 
 export const Title = styled.h3`
   margin-top: 3rem;
@@ -21,8 +26,20 @@ export const Command = styled.div`
     border-radius: 0.5rem;
     padding: 1rem;
 
+    ${media.lessThan('medium')`
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      overflow-x: scroll;
+    `}
+
     code {
       font-size: 1.8rem;
+
+      ${media.lessThan('medium')`
+        font-size: 1.2rem;
+        align-self: start;
+      `}
 
       &::before {
         content: '$';
@@ -45,6 +62,10 @@ export const Command = styled.div`
         background-color: ${theme.colors.darkGray};
         color: ${theme.colors.white};
       }
+
+      ${media.lessThan('medium')`
+        margin-top: 1rem;
+      `}
     }
   `}
 `

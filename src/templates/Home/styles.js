@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -9,6 +10,15 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: ${theme.grid.container};
     margin: 8rem auto;
+
+    ${media.lessThan('medium')`
+      padding: 0 2rem;
+      margin: 4rem auto;
+
+      &h2, h3 {
+        font-size: 1.2rem;
+      }
+    `}
   `}
 `
 
