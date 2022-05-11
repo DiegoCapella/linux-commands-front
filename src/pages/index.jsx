@@ -12,6 +12,6 @@ export async function getStaticProps() {
     props: {
       commands
     },
-    revalidate: 43200
+    revalidate: 28800
   }
 }
